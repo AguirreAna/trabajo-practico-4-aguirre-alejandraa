@@ -1,5 +1,5 @@
 import express from "express";
-
+import {conectarBD, sequelize } from "./src/config/database.js";
 //middlewares
 const app = express();
 
