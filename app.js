@@ -1,5 +1,7 @@
 import express from "express";
+import movieRoutes from "./src/routes/movie.routes.js";
 import {conectarBD, sequelize } from "./src/config/database.js";
+
 //middlewares
 const app = express();
 
@@ -18,5 +20,6 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, async () => {
+    await conectarBD()
     console.log("servidor listo")
 })
